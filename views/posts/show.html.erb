@@ -1,0 +1,18 @@
+<header>
+  <div class="header-logo">
+    <a href="/">スエマス</a>
+  </div>
+  <ul class="header-menus">
+    <li>
+     <a href="/about">スエマスとは</a>
+    </li>
+  </ul>
+</header>
+
+
+<div class="posts-show-item">
+    <%=@post.content%>
+    <div class="post-time">
+        <%= @post.created_at %>
+    </div>
+</div>
