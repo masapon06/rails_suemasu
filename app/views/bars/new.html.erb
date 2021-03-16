@@ -1,0 +1,20 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">吸えるお店を新たに投稿する</h1>
+    <%=form_tag("/bars/create")do%>
+    <div class="form">
+      <div class="form-body">
+        <p>店名</p>
+        <textarea name="name" value = "<%= @bar.name %>"></textarea>
+        <p>お店のURL</p>
+        <textarea name="url" value = "<%= @bar.url %>"></textarea>
+        <p>住所</p>
+        <textarea name="address" value = "<%= @bar.address %>"></textarea>
+        <p>電話番号</p>
+        <textarea name="tel" value = "<%= @bar.tel %>"></textarea>
+        <input type="submit" value="投稿">
+      </div>
+    </div>
+    <%end%>
+  </div>
+</div>

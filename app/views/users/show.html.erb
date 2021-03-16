@@ -1,0 +1,17 @@
+<div class="main user-show">
+  <div class="container">
+  <%if @current_user.id == @user.id%>
+      <h1 class="form-heading" >
+      ようこそ,<%= @current_user.name %> さん
+      </h1>
+  <%end%>
+
+    <div class="user">    
+      <h2>ユーザー名: <%= @user.name%></h2>
+      <p>メールアドレス: <%= @user.email%></p>
+      <%if @current_user.id == @user.id%>
+      <%= link_to("編集", "/users/#{@user.id}/edit") %>
+      <%end%>
+    </div>
+  </div>
+</div>

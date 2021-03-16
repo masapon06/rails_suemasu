@@ -1,0 +1,130 @@
+// Place all the styles related to the bars controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* bars共通 ================================ */
+.bars-heading {
+  font-weight: 300;
+  margin: 60px 0 20px;
+  font-size: 24px;
+  color: #bcc8d4;
+}
+
+/* posts/index ================================ */
+.posts-index-item {
+    padding: 20px 30px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 6px #c1ced7;
+  }
+  
+  .post-left img {
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    box-shadow: 0 2px 6px #c1ced7;
+    object-fit: cover;
+  }
+  
+  .post-user-name a {
+    font-weight: 600;
+  }
+  
+  .post-user-name a:hover {
+    color: #3ecdc6;
+  }
+  
+  .post-left {
+    float: left;
+    width: 10%;
+  }
+  
+  .post-right {
+    float: left;
+    width: 90%;
+    padding-left: 25px;
+    text-align: left;
+  }
+  
+  /* posts/show ================================ */
+  /* users/show ================================ */
+  /* bars/show (usersのcssの、"use"→"bar"に置換。)*/
+  .bar-show {
+    text-align: center;
+  }
+  
+  .bar {
+    margin-bottom: 20px;
+  }
+  
+  .bar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 40%;
+    box-shadow: 0 2px 6px #c1ced7;
+    margin: 20px 0 10px;
+    object-fit: cover;
+  }
+  
+  .bar h2 {
+    font-size:20px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .bar p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  
+  .bar a {
+    color: #8899a6;
+    text-decoration: underline;
+    font-weight: 200;
+  }
+  
+  .bar span {
+    color: #afb6bf;
+    font-weight: 200;
+    padding: 0 6px 0 8px;
+  }
+  
+  .bar-tabs {
+    margin-top: 40px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 6px #c1ced7;
+  }
+  
+  .bar-tabs li {
+    float: left;
+  }
+  
+  .bar-tabs li.active {
+    border-bottom: 2px solid #3ecdc6;
+  }
+  
+  .bar-tabs li.active a {
+    color: #57575f;
+  }
+  
+  .bar-tabs a {
+    display: inline-block;
+    padding: 16px 30px;
+    color: #afb6bf;
+  }
+
+  /* bars/new ================================ */
+  .bars-new textarea {
+    font-size: 20px;
+    padding: 10px;
+    min-height: 140px;
+    border: 1px solid rgb(216, 218, 223);
+    resize: none;
+  }
+  
+  .bars-new textarea::-webkit-input-placeholder {
+    font-size: 24px;
+    opacity: 0.5;
+  }
+  

@@ -1,0 +1,10 @@
+<div class="main posts-index">
+  <div class="container">
+  <h1 class="bars-heading">店舗情報</h1>
+  <% @bars.each do |bar| %>
+    <div class="posts-index-item">
+      <%=link_to(bar.name, "/bars/#{bar.id}") %>
+    </div>
+  <%end%>
+  </div>
+</div>
