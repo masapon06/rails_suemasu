@@ -2,18 +2,22 @@
 <div class="main bar-show">
   <div class="container">
   <h1 class="bars-heading">店舗詳細</h1>
-    <div class="bar">      
+    <div class="bar">
       <h2><%= @bar.name%></h2>
       <div class="bar-left">
-        <img src="<%= "/bar_images/#{@bar.image_name}" %>">
+        <img class="image" src="<%= "/bar_images/#{@bar.image_name}" %>">
       </div>
-      <p>URL: <%= @bar.url%></p>
-      <p>所在地: <%= @bar.address%></p>
-      <p>TEL: <%= @bar.tel%></p>
+      <h2 class="bars-heading">店舗ホームページURL</h2>
+        <h2><%= @bar.url%></h2>
+      <h2 class="bars-heading">所在地</h2>
+        <h2 id="ad"><%= @bar.address%></h2>    
+      <div id="map"></div>
+      <h2 class="bars-heading">TEL</h2>
+        <h2><%= @bar.tel%></h2>
       <!--
       userのshowを流用。本来ここにcurrent userなら編集可能というボタンがある。あとでやる。
       -->
-  </div>
+    </div>
 
 <!--コメント欄-->
   <h1 class="bars-heading">店舗へのコメント</h1>
@@ -47,3 +51,39 @@
     <%end%>
   </div>
 </div>
+
+<script>
+
+let map
+let geocoder
+
+function initMap(){
+
+  geocoder = new google.maps.Geocoder()
+
+  map = new google.maps.Map(document.getElementById('map'), {
+  center: {lat: 37.912039, lng: 139.061775},
+  zoom: 18
+  });
+
+  let inputAddress = document.getElementById('ad').textContent;
+
+  geocoder.geocode( { 'address': inputAddress}, function(results, status) {
+    if (status == 'OK') {
+
+      map.setCenter(results[0].geometry.location);
+
+      var marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location
+      });      
+    } else {        
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+  
+}
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsL4UMyRCsFs-JnQP_ptFrjVu_lUWtORs&callback=initMap" async defer></script>

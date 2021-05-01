@@ -48,7 +48,11 @@
   
   /* posts/show ================================ */
   /* users/show ================================ */
-  /* bars/show (usersのcssの、"use"→"bar"に置換。)*/
+  /* bars/show*/
+  #map{
+    height: 400px;
+  }
+
   .bar-show {
     text-align: center;
   }
@@ -57,7 +61,7 @@
     margin-bottom: 20px;
   }
   
-  .bar img {
+  .image {
     width: 560px;
     height: 320px;
     border-radius: 30%;
