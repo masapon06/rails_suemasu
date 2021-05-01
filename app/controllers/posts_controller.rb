@@ -20,7 +20,7 @@ class PostsController < ApplicationController
     )
 
     @post.save
-    redirect_to("/bars/index")
+    redirect_to("/bars/index") # TODO: 本来ここは詳細ページをリフレッシュするように設定
   end
 
 end

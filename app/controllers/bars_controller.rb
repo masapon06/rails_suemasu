@@ -16,11 +16,12 @@ class BarsController < ApplicationController
         name: params[:name], 
         url: params[:url], 
         address: params[:address],
-        tel: params[:tel]
+        tel: params[:tel],
+        image_name: "bar_image001.jpeg"
       )
     
       if @bar.save
-        #session[:user_id] = @user.id
+        #session[:user_id] = @user.id 
         flash[:notice] = "ユーザー登録が完了しました。"
         redirect_to("/bars/index")
       else

@@ -4,6 +4,9 @@
   <h1 class="bars-heading">店舗詳細</h1>
     <div class="bar">      
       <h2><%= @bar.name%></h2>
+      <div class="bar-left">
+        <img src="<%= "/bar_images/#{@bar.image_name}" %>">
+      </div>
       <p>URL: <%= @bar.url%></p>
       <p>所在地: <%= @bar.address%></p>
       <p>TEL: <%= @bar.tel%></p>
