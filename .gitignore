@@ -5,7 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore including API_KEY
-/app/views/bars/show.html
+/app/views/bars/show.html.erb
 
 # Ignore bundler config.
 /.bundle
