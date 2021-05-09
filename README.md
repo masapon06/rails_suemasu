@@ -36,8 +36,26 @@ Ruby/Ruby on Rails/MySQL/AWS(EC2)/Amazon Linux
 - 店舗一覧ページ
 <img width="600" alt="index" src="https://user-images.githubusercontent.com/78773789/116800684-51956780-ab3e-11eb-8aa6-84af1edea090.png">
 
+## データベース設計
+URL: https://drawsql.app/niigata-university/diagrams/suemasu
+
+<img width="600" alt="index" src="https://user-images.githubusercontent.com/78773789/117566034-571b2080-b0ef-11eb-8dd2-727da08be778.png">
+
+- usersテーブル
+ユーザー登録したユーザーの情報です。認証時、emailとpasswordを参照します。
+
+- postsテーブル
+居酒屋に対するユーザーのコメントを保持するテーブルです。店舗詳細ページ下部に表示されています。users, postsテーブルとは一対多のリレーションです。
+
+- barsテーブル
+居酒屋の情報を保持するテーブルです。
+
+
 ## 今後実装予定の内容
 - タグ検索機能
 - 地図検索機能
 - お気に入り機能
 - サイトの見た目の向上 / UXの向上
+
+
+
